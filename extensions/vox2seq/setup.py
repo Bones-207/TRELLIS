@@ -10,7 +10,7 @@
 #
 
 from setuptools import setup
-from torch.utils.cpp_extension import CUDAExtension, BuildExtension
+from torch.utils.cpp_extension im
 import os
 os.path.dirname(os.path.abspath(__file__))
 
