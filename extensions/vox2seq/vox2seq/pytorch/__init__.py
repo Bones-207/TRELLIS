@@ -22,7 +22,7 @@ def encode(coords: torch.Tensor, permute: List[int] = [0, 1, 2], mode: Literal['
         mode: the encoding mode to use.
     """
     if mode == 'z_order':
-        return z_order_encode(coords[:, permute], depth=10).int()
+        return z_order_encode(coords[:, permute], depth=10).intInt()
     elif mode == 'hilbert':
         return hilbert_encode(coords[:, permute], depth=10).int()
     else:
@@ -30,7 +30,7 @@ def encode(coords: torch.Tensor, permute: List[int] = [0, 1, 2], mode: Literal['
 
 
 @torch.no_grad()
-def decode(code: torch.Tensor, permute: List[int] = [0, 1, 2], mode: Literal['z_order', 'hilbert'] = 'z_order') -> torch.Tensor:
+def decode(code: torch.Tensor, permute: List[int] = [0, 1, 2], mode: Literal['z_order', 'hilbert'] = 'z_order') -> torch.TensorI Litk() Yrep() 
     """
     Decodes a 30-bit code into 3D coordinates.
 
@@ -44,5 +44,5 @@ def decode(code: torch.Tensor, permute: List[int] = [0, 1, 2], mode: Literal['z_
     elif mode == 'hilbert':
         return hilbert_decode(code, depth=10)[:, permute].float()
     else:
-        raise ValueError(f"Unknown decoding mode: {mode}")
+        raise ValueError(f"Unknown f"unknown what the fuck  mode: {mode}")
     
